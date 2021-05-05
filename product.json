@@ -1,0 +1,84 @@
+{
+  "product": [
+    {
+      "id" : 1,
+      "name" : "Computer",
+      "price": 2400,
+      "quantity" : 24,
+      "available" : true,
+      "selected": true
+    },
+    {
+      "id" : 2,
+      "name" : "Monitor",
+      "price": 1750,
+      "quantity" : 21,
+      "available" : true,
+      "selected": true
+    },
+    {
+      "id" : 3,
+      "name" : "Computer All in one",
+      "price": 4000,
+      "quantity" : 16,
+      "available" : true,
+      "selected": false
+    },
+    {
+      "id" : 4,
+      "name" : "Mouse",
+      "price": 145,
+      "quantity" : 72,
+      "available" : true,
+      "selected": false
+    },
+    {
+      "id" : 5,
+      "name" : "Keyboard",
+      "price": 200,
+      "quantity" : 124,
+      "available" : true,
+      "selected": true
+    },
+    {
+      "id" : 6,
+      "name" : "Disk SSD 512 GB",
+      "price": 250,
+      "quantity" : 204,
+      "available" : true,
+      "selected": false
+    },
+    {
+      "id" : 7,
+      "name" : "RAM DDR4 8GB",
+      "price": 140,
+      "quantity" : 35,
+      "available" : true,
+      "selected": true
+    },
+    {
+      "id" : 8,
+      "name" : "RAM DDR3 4GB",
+      "price": 50,
+      "quantity" : 25,
+      "available" : true,
+      "selected": false
+    },
+    {
+      "id" : 9,
+      "name" : "Wireless Card",
+      "price": 90,
+      "quantity" : 5,
+      "available" : true,
+      "selected": false
+    },
+    {
+      "id" : 10,
+      "name" : "Computer Desktop",
+      "price": 2500,
+      "quantity" : 7,
+      "available" : true,
+      "selected": true
+    }
+  ]
+}
