@@ -7,3 +7,4 @@ export interface Product {
   available : boolean;
   selected: boolean;
 }
+

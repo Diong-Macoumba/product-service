@@ -7,6 +7,8 @@ import { ProductComponent } from './components/product/product.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './components/home/home.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ProductAddComponent } from './components/product/product-add/product-add.component';
 
 
 @NgModule({
@@ -14,12 +16,15 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ProductComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

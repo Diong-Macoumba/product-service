@@ -14,18 +14,31 @@ export class ProductService {
 
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.host}/products`)
+    return this.http.get<Product[]>(`${environment.host}/product`)
   }
 
   getAllAvailableProduct(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.host}/products?available=true`)
+    return this.http.get<Product[]>(`${environment.host}/product?available=true`)
   }
 
   getAllSelectedProduct(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.host}/products?selected=true`)
+    return this.http.get<Product[]>(`${environment.host}/product?selected=true`)
   }
 
   searchProduct(keyword: string): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.host}/products?key=${keyword}`)
+    return this.http.get<Product[]>(`${environment.host}/product?name_like=${keyword}`)
+  }
+
+  select(product: Product): Observable<Product> {
+    product.selected = !product.selected
+    return this.http.put<Product>(`${environment.host}/product/product.id`, product);
+  }
+
+  delete(product: Product): Observable<void> {
+    return this.http.delete<void>(`${environment.host}/product/${product.id}`)
+  }
+
+  create(product: Product): Observable<Product> {
+    return this.http.post<Product>(`${environment.host}/product/add`,product)
   }
 }
