@@ -1,26 +1,38 @@
-<div class="container">
-  <form>
+<div class="container" *ngIf="productFormGroup">
+  <form [formGroup]="productFormGroup">
     <div class="form-group">
       <label>Name * : </label>
-        <input class="form-control" name="name" type="text">
+        <input class="form-control" name="name" type="text" formControlName="name"
+               [ngClass]="{'is-invalid': productFormGroup.controls.name.errors && submitted}">
+        <div *ngIf="submitted && productFormGroup.controls.name.errors" class="invalid-feedback">
+          <div *ngIf="productFormGroup.controls.name.errors.required">Name is require</div>
+        </div>
     </div>
     <div class="form-group">
       <label>Price * : </label>
-        <input class="form-control" type="number" name="price">
+        <input class="form-control" type="number" name="price" formControlName="price"
+               [ngClass]="{'is-invalid': productFormGroup.controls.price.errors && submitted}">
+        <div *ngIf="submitted && productFormGroup.controls.price.errors" class="invalid-feedback">
+          <div *ngIf="productFormGroup.controls.price.errors.required">Price is require</div>
+        </div>
     </div>
     <div class="form-group">
       <label>Quantity * : </label>
-        <input class="form-control-file" type="number" name="quantity">
+        <input class="form-control-file" type="number" name="quantity" formControlName="quantity"
+               [ngClass]="{'is-invalid': productFormGroup.controls.quantity.errors && submitted}">
+      <div *ngIf="submitted && productFormGroup.controls.quantity.errors" class="invalid-feedback">
+        <div *ngIf="productFormGroup.controls.quantity.errors.required">Quantity is require</div>
+      </div>
     </div>
     <div class="form-group">
       <label>Available * : </label>
-      <input class="form-check" type="checkbox" name="available">
+      <input class="form-check" type="checkbox" name="available" formControlName="available">
     </div>
     <div class="form-group">
       <label>Selected * : </label>
-      <input class="form-check" type="checkbox" name="selected">
+      <input class="form-check" type="checkbox" name="selected" formControlName="selected">
     </div>
-      <button class="btn btn-sm btn-outline-info">Save</button>
+      <button (click)="create()" class="btn btn-sm btn-outline-info">Save</button>
   </form>
 </div>
 

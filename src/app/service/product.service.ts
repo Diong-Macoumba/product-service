@@ -39,6 +39,6 @@ export class ProductService {
   }
 
   create(product: Product): Observable<Product> {
-    return this.http.post<Product>(`${environment.host}/product/add`,product)
+    return this.http.post<Product>(`${environment.host}/product`,product)
   }
 }

@@ -55,6 +55,22 @@
       "quantity": 7,
       "available": false,
       "selected": true
+    },
+    {
+      "name": "a",
+      "price": 0,
+      "quantity": 0,
+      "available": true,
+      "selected": false,
+      "id": 11
+    },
+    {
+      "name": "p",
+      "price": 44,
+      "quantity": 77,
+      "available": false,
+      "selected": false,
+      "id": 12
     }
   ]
 }

@@ -11,6 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class ProductAddComponent implements OnInit {
 
   productFormGroup?: FormGroup
+  submitted: boolean = false
 
   constructor(private productService: ProductService, private formBuilder: FormBuilder) {
 
@@ -28,11 +29,14 @@ export class ProductAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  create(product: Product) {
-    this.productService.create(product).subscribe(
-      data => {
-        console.log(data)
-      }
-    )
+  create() {
+    this.submitted = true
+    if (this.productFormGroup?.valid) {
+      this.productService.create(this.productFormGroup?.value).subscribe(
+        data => {
+          console.log(data)
+        }
+      )
+    }
   }
 }
