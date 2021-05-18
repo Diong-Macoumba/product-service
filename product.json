@@ -49,14 +49,6 @@
       "selected": false
     },
     {
-      "id": 10,
-      "name": "Computer Desktop",
-      "price": 2500,
-      "quantity": 7,
-      "available": false,
-      "selected": true
-    },
-    {
       "name": "a",
       "price": 0,
       "quantity": 0,

@@ -31,7 +31,7 @@ export class ProductService {
 
   select(product: Product): Observable<Product> {
     product.selected = !product.selected
-    return this.http.put<Product>(`${environment.host}/product/product.id`, product);
+    return this.http.put<Product>(`${environment.host}/product/${product.id}`, product);
   }
 
   delete(product: Product): Observable<void> {
@@ -40,5 +40,13 @@ export class ProductService {
 
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(`${environment.host}/product`,product)
+  }
+
+  update(product: Product): Observable<Product> {
+    return this.http.put<Product>(`${environment.host}/product/${product.id}`, product);
+  }
+
+  find(id: number | undefined): Observable<Product> {
+    return this.http.get<Product>(`${environment.host}/product/${id}`)
   }
 }

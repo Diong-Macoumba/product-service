@@ -62,6 +62,11 @@
           </button>
         </td>
         <td>
+          <button class="btn btn-sm btn-outline-info" [routerLink]="['/products/edit/', p.id]">
+            <span class="fa fa-edit"></span>
+          </button>
+        </td>
+        <td>
           <button class="btn btn-sm badge-danger" (click)="delete(p)">
             <span class="fa fa-trash-o"></span>
           </button>
